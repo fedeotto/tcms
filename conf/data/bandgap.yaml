@@ -1,0 +1,5 @@
+name: bandgap
+path: datasets/${data.name}.xlsx
+path_ft: transfer_models/transfer_crab_bandgap_mp_processed.pt
+log_prop: false
+crab_fudge: 0.02

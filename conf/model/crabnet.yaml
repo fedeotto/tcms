@@ -1,0 +1,8 @@
+elem_prop: mat2vec
+n_ensemble: 10 #set 10 for fitting, 3 for lotcmo
+name: crabnet
+batch_size: 512
+max_epochs: 300
+d_model: 512
+N: 3            #Default crab params, don't change
+heads: 4

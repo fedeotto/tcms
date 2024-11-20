@@ -1,0 +1,7 @@
+name: eval
+n_runs: 1
+
+cv:
+  method: Kfold #or Kfold
+  num_folds: 5 #leave to 5
+  

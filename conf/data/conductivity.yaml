@@ -1,0 +1,4 @@
+name: conductivity
+path: datasets/${data.name}.xlsx
+log_prop: true
+crab_fudge: 0.02

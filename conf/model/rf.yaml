@@ -1,0 +1,6 @@
+elem_prop: magpie
+name: rf
+n_estimators: 500
+#no n_ensemble for random forest as it is instrinsically an ensemble method.
+# model:
+#   _target_: assets.RandomForest.RandomForest.MyRandomForest

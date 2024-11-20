@@ -1,0 +1,4 @@
+name: lotcmo
+sigma_path: datasets/conductivity.xlsx
+gap_path: datasets/bandgap.xlsx
+model_name: ${model.name}

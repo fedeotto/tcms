@@ -1,0 +1,14 @@
+random_state: 1234
+hydra:
+  mode: RUN
+  run:
+    dir: hydra/singlerun/${now:%Y-%m-%d}--${now:%H-%M-%S}/${model.name}-${data.name}-${action.name}
+    # subdir: ${models.model_name}/${data.dataset_name}/
+  # sweep:
+  #   dir: hydra/multirun/${now:%Y-%m-%d}--${now:%H-%M-%S}
+  #   subdir: ${data.dataset_name}/${expname}/${random_state}
+
+defaults:
+  - model: crabnet
+  - data: conductivity
+  - action: screen
