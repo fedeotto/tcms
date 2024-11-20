@@ -9,7 +9,7 @@ from datetime import datetime
 from assets.CrabNet.utilities.utilities import RobustL1
 from sklearn.preprocessing import MinMaxScaler
 from assets.random_forest.RandomForest import RandomForest
-from data_modules.cbfv.composition import generate_features
+from assets.cbfv.composition import generate_features
 import pickle
 import numpy as np
 import random

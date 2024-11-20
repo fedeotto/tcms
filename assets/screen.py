@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import os
 from common.utils import preprocess_data_ml
-from data_modules.cbfv.composition import generate_features
+from assets.cbfv.composition import generate_features
 import pickle
 from assets.fit import predict_crabnet, predict_rf
 from common import chem
@@ -126,42 +126,3 @@ def screen_rf(materials_list: pd.DataFrame, cfg:DictConfig):
     results_rf['model']   = 'rf'
 
     return results_rf
-
-def attach_experimental_values(screen_result: pd.DataFrame,
-                               mode          = None):
-    """
-    Script to attach experimental values to the screened materials 
-    in case they were present in original train datasets.
-    """
-    conductivity = pd.read_excel('./datasets/conductivity.xlsx')
-    bandgap      = pd.read_excel('./datasets/bandgap.xlsx')
-
-    conductivity['pmg_formula'] = conductivity['formula'].apply(lambda x: Composition(x).formula.replace(' ', ''))
-    bandgap['pmg_formula']      = bandgap['formula'].apply(lambda x: Composition(x).formula.replace(' ', ''))
-
-    if mode == 'orig_cond_pred_gap':
-        screen_result['eg_exp'] = 0
-    elif mode == 'orig_gap_pred_cond':
-        screen_result['sigma_exp'] = 0
-    else:
-        screen_result['eg_exp'] = 0
-        screen_result['sigma_exp'] = 0
-
-    for formula in screen_result['formula']:
-        if mode == 'orig_gap_pred_cond':
-            if formula in conductivity['formula'].tolist():
-                screen_result.loc[screen_result['formula']==formula,'sigma_pred (eV)'] = np.log10(conductivity.loc[conductivity['formula']==formula,'Sigma (S/cm)'].values[0])
-                screen_result.loc[screen_result['formula']==formula,'sigma_exp']  = 1
-        elif mode == 'orig_cond_pred_gap':
-            if formula in bandgap['formula'].tolist():
-                screen_result.loc[screen_result['formula']==formula,'eg_pred (eV)'] = bandgap.loc[bandgap['formula']==formula,'Eg (eV)'].values[0]
-                screen_result.loc[screen_result['formula']==formula,'eg_exp']  = 1
-        else:
-            if formula in conductivity['pmg_formula'].tolist():
-                screen_result.loc[screen_result['formula']==formula,'sigma_pred log10 (S/cm)'] = np.log10(conductivity.loc[conductivity['pmg_formula']==formula,'Sigma (S/cm)'].values[0])
-                screen_result.loc[screen_result['formula']==formula,'sigma_exp']  = 1
-            if formula in bandgap['pmg_formula'].tolist():
-                screen_result.loc[screen_result['formula']==formula,'eg_pred (eV)'] = bandgap.loc[bandgap['pmg_formula']==formula,'Eg (eV)'].values[0]
-                screen_result.loc[screen_result['formula']==formula,'eg_exp']  = 1
-    
-    return screen_result

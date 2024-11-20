@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from assets import evaluate, fit, screen, plotting
+from assets import evaluate, fit, screen
 from assets.leave_one_tcm_out import leave_one_tcm_out
 from hydra.core.hydra_config import HydraConfig
 import pandas as pd

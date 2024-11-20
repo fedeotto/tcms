@@ -7,7 +7,7 @@ from omegaconf import DictConfig
 from assets.CrabNet.utilities.utilities import RobustL1
 from torch.utils.data import DataLoader
 from sklearn.preprocessing import MinMaxScaler
-from data_modules.cbfv.composition import generate_features
+from assets.cbfv.composition import generate_features
 from assets.random_forest.RandomForest import RandomForest
 from assets.CrabNet.kingcrab import CrabNet
 from assets.CrabNet.model import Model
