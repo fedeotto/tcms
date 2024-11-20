@@ -56,7 +56,7 @@ class Embedder(nn.Module):
         self.d_model = d_model
         self.compute_device = compute_device
 
-        elem_dir = 'data_modules/element_properties'
+        elem_dir = 'assets/element_properties'
         mat2vec = f'{elem_dir}/mat2vec.csv' 
         cbfv = pd.read_csv(mat2vec, index_col=0).values
         
@@ -191,12 +191,12 @@ class Encoder(nn.Module):
         if self.attention:
             x_src = x + pe + ple
             x_src = x_src.transpose(0, 1)
-            # x = self.transformer_encoder(x_src,
-            #                              src_key_padding_mask=src_mask)
-            x, attn = self.transformer_encoder(x_src,
-                                               src_key_padding_mask=src_mask)
+            x = self.transformer_encoder(x_src,
+                                         src_key_padding_mask=src_mask)
+            # x, attn = self.transformer_encoder(x_src,
+            #                                    src_key_padding_mask=src_mask)
             
-            last_attn = attn[-1] * mask
+            # last_attn = attn[-1] * mask
             x = x.transpose(0, 1)
 
         if self.fractional:
@@ -206,10 +206,10 @@ class Encoder(nn.Module):
         if mask is not None:
             x = x.masked_fill(hmask == 0, 0)
 
-        if return_att:
-            return x, last_attn
-        else:
-            return x
+        # if return_att:
+        #     return x, last_attn
+        # else:
+        return x
 
 class CrabNet(nn.Module):
     def __init__(self,

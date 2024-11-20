@@ -9,6 +9,6 @@ hydra:
   #   subdir: ${data.dataset_name}/${expname}/${random_state}
 
 defaults:
-  - model: crabnet
+  - model: rf
   - data: conductivity
   - action: screen

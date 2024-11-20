@@ -147,8 +147,8 @@ def fit_rf(cfg: DictConfig,
         pickle.dump(scaler, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
     #RF IS ALREADY AN ENSEMBLE METHOD
-    model_pred = MyRandomForest(random_state=cfg.random_state)
-    model_ale = MyRandomForest(min_samples_leaf=10, random_state=cfg.random_state)
+    model_pred = RandomForest(random_state=cfg.random_state)
+    model_ale = RandomForest(min_samples_leaf=10, random_state=cfg.random_state)
 
     model_pred.fit(X,y)
     model_ale.fit(X,y)

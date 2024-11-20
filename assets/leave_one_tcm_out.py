@@ -5,7 +5,7 @@ import sys
 from assets import fit
 from common import chem
 from omegaconf import DictConfig
-from data_modules.cbfv.composition import generate_features
+from assets.cbfv.composition import generate_features
 from assets.random_forest.RandomForest import RandomForest
 from assets.evaluate import eval_crabnet
 from sklearn.preprocessing import StandardScaler

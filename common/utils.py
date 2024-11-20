@@ -59,8 +59,7 @@ def preprocess_data_ml(df_,
     idxs_to_drop = []
 
     if elem_prop != 'mendeleev':
-        elem_props = pd.read_csv(f'data_modules/element_properties/{elem_prop}.csv', 
-                                index_col='element')
+        elem_props = pd.read_csv(f'assets/element_properties/{elem_prop}.csv', index_col='element')
         
         valid_elems= list(elem_props.index)
 
