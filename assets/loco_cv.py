@@ -7,7 +7,7 @@ https://pubs.rsc.org/en/content/articlelanding/2022/dd/d2dd00039c
 
 import pandas as pd
 import matplotlib.pyplot as plt
-from data_modules.cbfv.composition import generate_features
+from assets.cbfv.composition import generate_features
 from sklearn.kernel_approximation import RBFSampler
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
