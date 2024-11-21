@@ -26,6 +26,8 @@ We provide access to trained models (CrabNet and Random Forest) on the full data
 ### Screening new materials from custom materials lists
 Fitted ML models can be used to predict electrical conductivity and band gap of new materials. To do so, you have to place a separate `csv` file named `materials_list.csv` that you want to screen, with two columns `Entry` and `formula`:
 
+### Jupyter Notebooks
+
 ### Train ML models on available data
 It is possible to fit available ML models on custom data of $\sigma$ and $E_g$. <br> 
 Below, you can find an example of fitting CrabNet using a custom `bandgap.xlsx` dataset:
