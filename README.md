@@ -1,11 +1,8 @@
-![Alt text](ML_tcms.png)
-
 # Assessing data-driven predictions of band gap and conductivity for transparent conducting materials
 
 This repository contains python code accompanying the paper **Assessing data-driven predictions of band gap and electrical conductivity for transparent conducting materials**.
 
 ## Installation
-1. Install `miniconda3`, follow the instructions <a href="https://docs.anaconda.com/free/miniconda/index.html">here</a>. It is recommended to use the **Quick Command Line Install**. <br> <br>
 1. Clone this repository:
    ```git
    git clone https://github.com/fedeotto/nsg
