@@ -18,7 +18,7 @@ This repository contains python code accompanying the paper **Assessing data-dri
 
 ## Usage
 ### Data
-We provide restricted, open-access version of the datasets discussed in the paper. `conductivity.xlsx` is derived from the `ucsb_thermoelectrics` dataset while `bandgap.xlsx` is derived from `matbench_expt_gap` dataset from matminer. for demonstration purposes to run the code. However, the full datasets presented in the paper cannot be disclosed due to confidentiality agreements and restrictions associated with the use of proprietary commercial databases. An API license for the Materials Platform for Data Science can be purchased at the following link.
+Both `conductivity.xlsx` and `bandgap.xlsx` in the `datasets` folder are open-access and can be derived from matminer (link) under the names `ucsb_thermoelectrics` and `matbench_expt_gap`, respectively. However, these are provided solely for demonstration purposes to run the code, while the full datasets presented in the paper cannot be disclosed due to confidentiality agreements and restrictions associated with the use of proprietary commercial databases. To access the full raw data, an API license for the Materials Platform for Data Science can be purchased at the following link.
 
 ### Train ML models on available data
 It is possible to fit available ML models on custom data of $\sigma$ and $E_g$. <br> 
