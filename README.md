@@ -7,26 +7,18 @@ This repository contains python code accompanying the paper **Assessing data-dri
    ```git
    git clone https://github.com/fedeotto/nsg
    ```
-2. Install a new `conda` environment from `nsg_env.yml`:
+2. Install a new `conda` environment from `env.yml`:
    ```git
-   conda env create -f nsg_env.yml
+   conda env create -f env.yml
    ```
 3. Activate the new environment:
    ```git
-   conda activate nsg
+   conda activate tcms
    ```
 
 ## Usage
-### Data for optoelectronic properties
-Datasets must be `xlsx` files stored into the `datasets` folder and named `conductivity.xlsx` and `bandgap.xlsx`. An example of input dataset of electrical conductivity is presented below:
-
-| Entry |     formula | Sigma (S/cm) |
-|----------|----------|----------|
-| P1909068-1 | Ca2ReCoO6 | 1e-03 |
-| P1119354-1 | GdPdIn2   | 5.29e+03|
-| P1821412-1 | CeFe2Al8  | 2e+03 |
-
-Similar data input holds for band gap with the exception of the last header which must be named `Eg (eV)`. If a specific entry or is not available, then any unique string can be placed in the `Entry` column.
+### Data
+We provide restricted, open-access version of the datasets discussed in the paper. `conductivity.xlsx` is derived from the `ucsb_thermoelectrics` dataset while `bandgap.xlsx` is derived from `matbench_expt_gap` dataset from matminer. for demonstration purposes to run the code. However, the full datasets presented in the paper cannot be disclosed due to confidentiality agreements and restrictions associated with the use of proprietary commercial databases. An API license for the Materials Platform for Data Science can be purchased at the following link.
 
 ### Train ML models on available data
 It is possible to fit available ML models on custom data of $\sigma$ and $E_g$. <br> 
