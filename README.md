@@ -2,7 +2,7 @@
 
 # Assessing data-driven predictions of band gap and conductivity for transparent conducting materials
 
-This repository contains python code to train state-of-the-art Machine Learning (ML) models for the identification of new **transparent conducting materials** (TCMs) according to available data of electrical conductivity ($\sigma$) and band gap ($E_g$).
+This repository contains python code accompanying the paper **Assessing data-driven predictions of band gap and electrical conductivity for transparent conducting materials**.
 
 ## Installation
 1. Install `miniconda3`, follow the instructions <a href="https://docs.anaconda.com/free/miniconda/index.html">here</a>. It is recommended to use the **Quick Command Line Install**. <br> <br>
