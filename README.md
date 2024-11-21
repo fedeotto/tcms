@@ -20,6 +20,12 @@ This repository contains python code accompanying the paper **Assessing data-dri
 ### Data
 Both `conductivity.xlsx` and `bandgap.xlsx` in the `datasets` folder are open-access and can be derived from matminer (link) under the names `ucsb_thermoelectrics` and `matbench_expt_gap`, respectively. However, these are provided solely for demonstration purposes to run the code, while the full datasets presented in the paper cannot be disclosed due to confidentiality agreements and restrictions associated with the use of proprietary commercial databases. To access the full raw data, an API license for the Materials Platform for Data Science can be purchased at the following link.
 
+### Trained models
+We provide access to trained models (CrabNet and Random Forest) on the full data presented in the papers at the following link (GDrive)
+
+### Screening new materials from custom materials lists
+Fitted ML models can be used to predict electrical conductivity and band gap of new materials. To do so, you have to place a separate `csv` file named `materials_list.csv` that you want to screen, with two columns `Entry` and `formula`:
+
 ### Train ML models on available data
 It is possible to fit available ML models on custom data of $\sigma$ and $E_g$. <br> 
 Below, you can find an example of fitting CrabNet using a custom `bandgap.xlsx` dataset:
@@ -30,8 +36,7 @@ python run.py action=fit model=crabnet data=bandgap
 ```
 Trained models are stored into `trained_models/{model_name}` (Available models are `crabnet`, `rf`, and `dopnet`). It is recommended to utilize either `crabnet` or `rf` as `dopnet` is in a more experimental stage and considered to be less reliable than the other two. Unless a new substantial volume of data becomes available, it might be **not needed** to fit the models, as the latest ones (trained on top of our validated databases at UoL) are available here: https://drive.google.com/drive/folders/1zhbSQgu4TSjLzQzzC67ats7tvlyU7Pc7?usp=drive_link
 
-### Screening new materials from custom materials lists
-Fitted ML models can be used to predict electrical conductivity and band gap of new materials. To do so, you have to place a separate `csv` file named `materials_list.csv` that you want to screen, with two columns `Entry` and `formula` :
+
 
 <table>
   <thead>
