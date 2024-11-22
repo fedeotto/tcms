@@ -5,7 +5,7 @@ This repository contains python code accompanying the paper **Assessing data-dri
 ## Installation
 1. Clone this repository:
    ```git
-   git clone https://github.com/fedeotto/nsg
+   git clone https://github.com/fedeotto/tcms
    ```
 2. Install a new `conda` environment from `env.yml`:
    ```git
