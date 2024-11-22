@@ -18,7 +18,7 @@ This repository contains python code accompanying the paper **Assessing data-dri
 
 ## Usage
 ### Data
-Both `conductivity.xlsx` and `bandgap.xlsx` in the `datasets` folder are open-access and can be derived from matminer datasets (<a href="https://hackingmaterials.lbl.gov/matminer/dataset_summary.html">link</a>) under the names `ucsb_thermoelectrics` and `matbench_expt_gap`, respectively. However, these are provided solely for demonstration purposes to run the code, while the full datasets presented in the paper *cannot* be disclosed due to confidentiality agreements and restrictions associated with the use of proprietary commercial databases. To access the full raw data, an API license for the Materials Platform for Data Science (MPDS) can be purchased at the following <a href="https://mpds.io">link</a>.
+Both `conductivity.xlsx` and `bandgap.xlsx` in the `datasets` folder are open-access and can be derived from matminer datasets (<a href="https://hackingmaterials.lbl.gov/matminer/dataset_summary.html">link</a>) under the names `ucsb_thermoelectrics` and `matbench_expt_gap`, respectively. However, these are provided solely for demonstration purposes to run the code, while the full datasets presented in the paper *cannot* be disclosed due to confidentiality agreements and restrictions associated with the use of commercial databases. To access the full raw data, an API license for the Materials Platform for Data Science (MPDS) can be purchased at the following <a href="https://mpds.io">link</a>.
 
 ### Trained models
 We provide access to trained models (CrabNet and Random Forest) on the full data presented in the papers at the following <a href="https://drive.google.com/drive/folders/16cIHWnbz585LBH1cTGj3jXh9TgGLtbNV?usp=drive_link">link</a> (GDrive).
@@ -30,6 +30,12 @@ python main.py action=screen model=crabnet ++screen.screen_path=datasets/tcms.xl
 ```
 
 ### Jupyter Notebooks
+We include jupyter notebooks illustrating the analysis presented in the paper:
 
+  1. `att_coeff.ipynb`: contains the analysis relative to the attention coefficients of CrabNet in the task of leave-one-TCM-out described in the paper.
 
-### Other 
+  2. `bandgap_prediction.ipynb`: illustrates the comparison on the task of band gap prediction across different settings considered, in particular Random Forest, CrabNet with no fine-tuning and CrabNet fine-tuned on Materials project band gap data.
+
+  3. `parity.ipynb` contains additional visualization and plotting corresponding to electrical conductivity and band gap predictions.
+
+### Other usage
