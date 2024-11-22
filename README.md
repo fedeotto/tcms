@@ -1,5 +1,5 @@
-# Assessing data-driven predictions of band gap and conductivity for transparent conducting materials
 [![arXiv](https://img.shields.io/badge/arXiv-2411.14034-b31b1b.svg)](https://arxiv.org/abs/2411.14034)
+# Assessing data-driven predictions of band gap and conductivity for transparent conducting materials
 This repository contains python code accompanying the paper **Assessing data-driven predictions of band gap and electrical conductivity for transparent conducting materials**.
 
 ## Installation
