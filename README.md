@@ -21,10 +21,13 @@ This repository contains python code accompanying the paper **Assessing data-dri
 Both `conductivity.xlsx` and `bandgap.xlsx` in the `datasets` folder are open-access and can be derived from matminer datasets (<a href="https://hackingmaterials.lbl.gov/matminer/dataset_summary.html">link</a>) under the names `ucsb_thermoelectrics` and `matbench_expt_gap`, respectively. However, these are provided solely for demonstration purposes to run the code, while the full datasets presented in the paper *cannot* be disclosed due to confidentiality agreements and restrictions associated with the use of proprietary commercial databases. To access the full raw data, an API license for the Materials Platform for Data Science (MPDS) can be purchased at the following <a href="https://mpds.io">link</a>.
 
 ### Trained models
-We provide access to trained models (CrabNet and Random Forest) on the full data presented in the papers at the following link (GDrive)
+We provide access to trained models (CrabNet and Random Forest) on the full data presented in the papers at the following <a href="https://drive.google.com/drive/folders/16cIHWnbz585LBH1cTGj3jXh9TgGLtbNV?usp=drive_link">link</a> (GDrive).
 
 ### Screening new materials from custom materials lists
-Fitted ML models can be used to predict electrical conductivity and band gap of new materials. To do so, you have to place a separate `csv` file named `materials_list.csv` that you want to screen, with two columns `Entry` and `formula`:
+Trained models can be used to predict electrical conductivity and band gap from arbitrary chemical compositions. You can reproduce the results illustrated in `Table 4` of the paper via
+```git
+python main.py action=screen model=crabnet ++screen.screen_path=datasets/tcms.xlsx
+```
 
 ### Jupyter Notebooks
 
