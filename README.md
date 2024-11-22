@@ -39,3 +39,8 @@ We include jupyter notebooks illustrating the analysis presented in the paper:
   3. `parity.ipynb` contains additional visualization and plotting corresponding to electrical conductivity and band gap predictions.
 
 ### Other usage
+It is also possible to evaluate/fit new machine learning models on available data. For example, to fit a new CrabNet model you could simply do via:
+
+```git
+python main.py action=fit model=crabnet data=conductivity
+```
