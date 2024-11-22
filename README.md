@@ -15,7 +15,7 @@ This repository contains python code accompanying the paper **Assessing data-dri
    ```git
    conda activate tcms
    ```
-
+Change the `.env.template` file to `.env` , modifying the necessary paths accordingly.
 ## Usage
 ### Data
 Both `conductivity.xlsx` and `bandgap.xlsx` in the `datasets` folder are open-access and can be derived from matminer datasets (<a href="https://hackingmaterials.lbl.gov/matminer/dataset_summary.html">link</a>) under the names `ucsb_thermoelectrics` and `matbench_expt_gap`, respectively. However, these are provided solely for demonstration purposes to run the code, while the full datasets presented in the paper *cannot* be disclosed due to confidentiality agreements and restrictions associated with the use of commercial databases. To access the full raw data, an API license for the Materials Platform for Data Science (MPDS) can be purchased at the following <a href="https://mpds.io">link</a>.
