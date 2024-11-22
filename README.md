@@ -23,7 +23,7 @@ Both `conductivity.xlsx` and `bandgap.xlsx` in the `datasets` folder are open-ac
 ### Trained models
 We provide access to trained models (CrabNet and Random Forest) on the full data presented in the papers at the following <a href="https://drive.google.com/drive/folders/16cIHWnbz585LBH1cTGj3jXh9TgGLtbNV?usp=drive_link">link</a> (GDrive).
 
-### Screening new materials from custom materials lists
+### Screening new materials from custom material lists
 Trained models can be used to predict electrical conductivity and band gap from arbitrary chemical compositions. You can reproduce the results illustrated in `Table 4` of the paper using trained models via
 ```git
 python main.py action=screen model=crabnet ++screen.screen_path=datasets/tcms.xlsx
@@ -34,7 +34,7 @@ We include jupyter notebooks illustrating the analysis presented in the paper:
 
   1. `att_coeff.ipynb`: contains the analysis relative to the attention coefficients of CrabNet in the task of leave-one-TCM-out described in the paper.
 
-  2. `bandgap_prediction.ipynb`: illustrates the comparison on the task of band gap prediction across different settings considered, in particular Random Forest, CrabNet with no fine-tuning and CrabNet fine-tuned on Materials project band gap data.
+  2. `bandgap_prediction.ipynb`: illustrates the comparison on the task of band gap prediction across different settings, in particular Random Forest, CrabNet with no fine-tuning and CrabNet fine-tuned on Materials project band gap data.
 
   3. `parity.ipynb` contains additional visualization and plotting corresponding to electrical conductivity and band gap predictions.
 
