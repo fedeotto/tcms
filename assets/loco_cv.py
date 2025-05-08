@@ -4,7 +4,7 @@ Script to create LOCO-CV splits according to the method proposed in the followin
 https://pubs.rsc.org/en/content/articlelanding/2022/dd/d2dd00039c
 
 """
-
+print('ciao jimmy!')
 import pandas as pd
 import matplotlib.pyplot as plt
 from assets.cbfv.composition import generate_features
