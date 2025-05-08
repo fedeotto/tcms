@@ -4,9 +4,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import sys
-
-sys.path.append('C:\\Users\\hp\\Desktop\\PHD\\Projects\\CrabNet\\Federico\\')
-
 from sklearn.metrics import mean_absolute_error, roc_auc_score, matthews_corrcoef, accuracy_score, f1_score, mean_squared_error, r2_score
 import torch
 from torch.optim.lr_scheduler import CyclicLR

@@ -28,8 +28,6 @@ def run(cfg: DictConfig):
         evaluate.cross_validate(cfg) #results stored in eval_results folder
     elif cfg.action.name == 'fit':
         fit.fit_model(cfg)
-    elif cfg.action.name == 'screen':
-        screen.screen_materials_list(cfg)
 
     elif cfg.action.name == 'lotcmo':
         families = ['ZnO','SnO2','In2O3']
