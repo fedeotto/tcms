@@ -26,8 +26,6 @@ python -m data.prepare_data
 ```
 This will automatically create `conductivity.xlsx` and `bandgap.xlsx` datasets in the `data` folder that can be used to run the code. Band gap data is automatically extracted using matminer (`matbench_expt_gap`).
 
-However, these can be utilized only for demonstration purposes, while the full datasets presented in the paper *cannot* be disclosed due to confidentiality agreements and restrictions associated with the use of commercial databases. To access the full raw data, an API license for the Materials Platform for Data Science (MPDS) can be purchased at the following <a href="https://mpds.io">link</a>.
-
 ### Trained models
 We provide access to trained models (CrabNet and Random Forest) on the full data presented in the paper at the following <a href="https://drive.google.com/drive/folders/1pe5J-yAY4s7wtDOItUkfz-BMdqCzAjS3?usp=sharing">link</a> (GDrive).
 
