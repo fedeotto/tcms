@@ -18,7 +18,15 @@ This repository contains python code accompanying the paper **Assessing data-dri
 Change the `.env.template` file to `.env` , modifying the necessary paths accordingly.
 ## Usage
 ### Data
-Both `conductivity.xlsx` and `bandgap.xlsx` in the `datasets` folder are open-access and can be derived from matminer datasets (<a href="https://hackingmaterials.lbl.gov/matminer/dataset_summary.html">link</a>) under the names `ucsb_thermoelectrics` and `matbench_expt_gap`, respectively. However, these are provided solely for demonstration purposes to run the code, while the full datasets presented in the paper *cannot* be disclosed due to confidentiality agreements and restrictions associated with the use of commercial databases. To access the full raw data, an API license for the Materials Platform for Data Science (MPDS) can be purchased at the following <a href="https://mpds.io">link</a>.
+Due to licensing restrictions associated with MPDS data and confidentiality agreements tied to funding, we are unable to publicly release the full experimental datasets used in this study (band gap and conductivity). However, we provide representative data that can be used as demonstration to run the proposed pipeline.
+
+First, you can download the updated version of UCSB dataset at the following <a href="https://zenodo.org/records/15365345">link</a> (`te_expt.xlsx`) and move it into the `data` folder. Then, run the script `prepare_data.py` via:
+```git
+python -m data.prepare_data
+```
+This will automatically create `conductivity.xlsx` and `bandgap.xlsx` datasets in the `data` folder that can be used to run the code. Band gap data is automatically extracted using matminer (`matbench_expt_gap`).
+
+However, these can be utilized only for demonstration purposes, while the full datasets presented in the paper *cannot* be disclosed due to confidentiality agreements and restrictions associated with the use of commercial databases. To access the full raw data, an API license for the Materials Platform for Data Science (MPDS) can be purchased at the following <a href="https://mpds.io">link</a>.
 
 ### Trained models
 We provide access to trained models (CrabNet and Random Forest) on the full data presented in the paper at the following <a href="https://drive.google.com/drive/folders/1pe5J-yAY4s7wtDOItUkfz-BMdqCzAjS3?usp=sharing">link</a> (GDrive).
