@@ -24,7 +24,7 @@ First, you can download the updated version of UCSB dataset at the following <a 
 ```git
 python -m data.prepare_data
 ```
-This will automatically create `conductivity.xlsx` and `bandgap.xlsx` datasets in the `data` folder that can be used to run the code. Band gap data is automatically extracted using matminer (`matbench_expt_gap`).
+This will automatically create `conductivity.xlsx` and `bandgap.xlsx` datasets in the `data` folder that can be used to run the code. Band gap data is automatically extracted using `matminer` (`matbench_expt_gap`).
 
 ### Trained models
 We provide access to trained models (CrabNet and Random Forest) on the full data presented in the paper at the following <a href="https://drive.google.com/drive/folders/1pe5J-yAY4s7wtDOItUkfz-BMdqCzAjS3?usp=sharing">link</a> (GDrive).
